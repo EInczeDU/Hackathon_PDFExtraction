@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+import tabula
+
+
+############################ Simplified method #######################################
+file_name = "35612587.pdf"
+path_to_pdf = f"PDFs/HackNov2025/GPRef/{file_name}"
+path_to_output = f"Outputs/HackNov2025/GPRef/{file_name}.csv"
+
+data = tabula.read_pdf(path_to_pdf, pages='all', multiple_tables=True)
